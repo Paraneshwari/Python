@@ -1,0 +1,16 @@
+n1=int(input())
+l1=[]
+f=0
+for i in range(n1):
+    a=int(input())
+    l1.append(a)
+x=int(input())
+for i in range(len(l1)):
+    if(l1[i]==x):
+        print(x," is present at location ",i+1,".",sep="")
+        f=1
+if(f==0):
+    print(x,"is not present in the array.")
+else:
+    print(x,"is present",l1.count(x),"times in the array.")
+
