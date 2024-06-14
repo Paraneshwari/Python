@@ -1,0 +1,12 @@
+a=input()
+l=a.split()
+l1=[]
+for i in l:
+    i=int(i)
+    if i not in l1:
+        l1.append(i)
+for i in range(len(l)):
+    l[i]=int(l[i])
+l1.sort()
+for i in l1:
+    print(i,l.count(i))
