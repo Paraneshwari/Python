@@ -1,18 +1,24 @@
-a=int(input())
-b=int(input())
-c=int(input())
-if((a>b)&(a>c)):
-    if(a**2==(b**2+c**2)):
-        print("yes")
-    else:
-        print("no")
-elif((b>a)&(b>c)):
-    if(b**2==(a**2+c**2)):
-        print("yes")
-    else:
-        print("no")
-else:
-    if(c**2==(b**2+a**2)):
-        print("yes")
-    else:
-        print("no")
+a=float(input())
+n=int(a)
+if(n<100):
+    print("{:.2f}".format(n*2))
+elif(n<=199):
+    b=1.20*n
+    print("{:.2f}".format(b))
+elif(n>=200):
+    if(n<400):
+        b=1.50*n
+        print("{:.2f}".format(b))
+    elif(n>=400):
+        if(n<600):
+            b=1.80*n
+            c=0.15*b
+            s=b+c
+            print("{:.2f}".format(s))
+        elif(n>600):
+            b=n*2.00
+            c=0.15*b
+            s=b+c
+            print("{:.2f}".format(s))
+
+    
