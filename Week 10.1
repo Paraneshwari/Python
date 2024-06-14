@@ -1,0 +1,35 @@
+def mergeSort(l,n):
+    if n > 1:
+        mid = n//2
+        s1 = l[:mid]
+        s2 = l[mid:]
+        mergeSort(s1,len(s1))
+        mergeSort(s2,len(s2))
+        i = j = k = 0
+        while i < len(s1) and j < len(s2):
+            if s1[i] < s2[j]:
+                l[k] = s1[i]
+                i += 1
+            else:
+                l[k] = s2[j]
+                j += 1
+            k += 1
+
+
+        while i < len(s1):
+            l[k] = s1[i]
+            i += 1
+            k += 1
+
+        while j < len(s2):
+            l[k] = s2[j]
+            j += 1
+            k += 1
+n=int(input())
+a=input()
+l=a.split()
+for i in range(len(l)):
+    l[i]=int(l[i])
+mergeSort(l,n)
+for i in l:
+    print (i, end=" ")
