@@ -1,0 +1,12 @@
+try:
+    a=int(input())
+    b=int(input())
+    c=a/b
+    d=a%b
+except ZeroDivisionError:
+    print("Error: Cannot divide or modulo by zero.")
+except ValueError:
+    print("Error: Non-numeric input provided.")
+else:
+    print("Division result:",float(c))
+    print("Modulo result:",(d))
