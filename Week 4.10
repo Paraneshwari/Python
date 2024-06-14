@@ -1,0 +1,19 @@
+n=int(input())
+m=n
+c=len(str(n))
+s=0
+l=[]
+while(m):
+    d=m%10
+    l.append((d,c))
+    c=c-1
+    m=m//10
+
+for i in l:
+    s=s+(i[0]**i[1])
+if(s==n):
+    print("Yes")
+else:
+    print("No")
+        
+  
