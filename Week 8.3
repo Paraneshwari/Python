@@ -1,18 +1,26 @@
-s=input()
-if len(s) <= 10:
-    result = []
+n=int(input())
+l=[]
+d={}
+for i in range(n):
+    a=input()
+    l.append(a)
+for i in l:
+    d[i]=l.count(i)
+m=0
+l1=[]
+for i in d:
+    if(d[i]>m):
+       m=d[i]
+       if(len(l1)==0):
+           l1.append(i)
+       else:
+           l1.pop()
+           l1.append(i)
+    elif(d[i]==m):
+        l1.append(i)
+if(len(l1)==1):
+    print(l1[0])
 else:
-    l1 = []
-    l2 = []
-
-    for i in range(len(s) - 9):
-        c= s[i:i+10]
-        if c in l1 and c not in l2:
-            l2.append(c)
-        else:
-            l1.append(c)
-
-    result = l2
-
-for i in result:
-    print(i)
+    l1=l1.sort()
+    print(l[0])
+    
