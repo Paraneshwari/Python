@@ -1,0 +1,13 @@
+try:
+    n=int(input())
+except ValueError:
+    print("Error: Please enter a valid age.")
+
+except EOFError:
+    print("Error: Please enter a valid age.")
+    
+else:
+    if(n<0):
+        print("Error: Please enter a valid age.")
+    else:
+        print("You are",n,"years old.")
