@@ -1,16 +1,21 @@
-s = input()
-s1 = input()
-s2 = input()
-l1 = s1.split()
-l2 = s2.split()
-l3 = []
-
-
-for i in l1:
-    if i not in l2:
-        l3.append(i)
-for i in l2:
-    if i not in l1:
-        l3.append(i)
-print(" ".join(l3))
-print(len(l3))
+n = int(input())
+d = {}
+for _ in range(n):
+    name, assignment, test, lab = input().split()
+    d[name] = (int(test), int(assignment), int(lab))
+avg = {name: sum(marks) / len(marks) for name, marks in d.items()}
+max_average = max(avg.values())
+highest_avg = [name for name, average in avg.items() if average == max_average]
+max_assignment = max(marks[0] for marks in d.values())
+highest_assignment = [name for name, marks in d.items() if marks[0] == max_assignment]
+min_lab = min(marks[2] for marks in d.values())
+lowest_lab = [name for name, marks in d.items() if marks[2] == min_lab]
+min_average = min(avg.values())
+lowest_average = [name for name, average in avg.items() if average == min_average]
+highest_assignment.sort()
+lowest_lab.sort()
+lowest_average.sort()
+print(" ".join(highest_avg))
+print(" ".join(highest_assignment))
+print(" ".join(lowest_lab))
+print(" ".join(lowest_average))
