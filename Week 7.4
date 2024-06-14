@@ -1,0 +1,25 @@
+n = int(input())
+l = []
+for i in range(n):
+    l.append(input())
+
+r1 = 'qwertyuiop'
+r2 = "asdfghjkl"
+r3 = "zxcvbnm"
+a=0
+for i in l:
+    f1 = f2 = f3 = 0
+    c = len(i)
+    for j in i:
+        j=j.lower()
+        if j in r1:
+            f1 += 1
+        elif j in r2:
+            f2 += 1
+        elif j in r3:
+            f3 += 1
+    if f1 == c or f2 == c or f3 == c:
+        print(i)
+        a+=1
+if(a==0):
+    print("No words"
