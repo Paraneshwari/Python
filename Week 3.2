@@ -1,9 +1,7 @@
-a=int(input())
-b=int(input())
-c=int(input())
-if(a==b==c):
-    print("That's a equilateral triangle")
-elif(a==b or b==c or c==a):
-    print("That's a isosceles triangle")
+a=input()
+if(a in ["January","March","May","July","August","October","December"]):
+    print(a,"has 31 days in it.")
+elif(a=="February"):
+    print(a,"has 28 or 29 days in it.")
 else:
-    print("That's a scalene triangle")
+    print(a,"has 30 days in it.")
