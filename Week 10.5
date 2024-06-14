@@ -1,0 +1,19 @@
+n=int(input())
+a=input()
+l=a.split()
+k=int(input())
+f=0
+for i in l:
+    for j in l:
+        if i!=j:
+            i=int(i)
+            j=int(j)
+            if i+j == k:
+                f=1
+                break
+    break
+if(f==1):
+    print("Yes")
+else:
+    print("No")
+    
