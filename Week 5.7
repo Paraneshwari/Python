@@ -1,30 +1,8 @@
-m=int(input())
-n=int(input())
-l1=[]
-l2=[]
-for i in range(m*n):
-    a=int(input())
-    l1.append(a)
-for i in range(m*n):
-    a=int(input())
-    l2.append(a)
-l3=[]
-c=0
-for i in range(m):
-    l3.append(l1[i])
-    c+=1
-for i in range(m):
-    l3.append(l2[i])
-l4=[]
-i=c
-while(i<len(l1)):
-    l4.append(l1[i])
-    i+=1
-j=c
-while(j<len(l2)):
-    l4.append(l2[j])
-    j+=1
-l5=[]
-l5.append(l3)
-l5.append(l4)
-print(l5)
+s=input()
+l=s.split()
+m=l[0]
+for i in l:
+    if(len(i)>len(m)):
+        m=i
+print(m)
+print(len(m))
