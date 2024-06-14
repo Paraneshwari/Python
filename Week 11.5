@@ -1,0 +1,18 @@
+def f1(num1, num2):
+    try:
+        result = num1 / num2
+        print(result)
+    except ZeroDivisionError:
+        print("Error: Cannot divide or modulo by zero.")
+    except Exception as e:
+        print("Error:", e)
+
+try:
+    num1 = float(input())
+    num2 = float(input())
+    f1(num1, num2)
+except ValueError:
+    print("Error: Non-numeric input provided.")
+
+
+
