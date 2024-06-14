@@ -1,0 +1,9 @@
+n=int(input())
+m=n
+l=[]
+while(m):
+    d=m%10
+    if d not in l:
+        l.append(d)
+    m=m//10
+print(len(l))
