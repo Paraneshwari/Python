@@ -1,0 +1,14 @@
+def christmasDiscount(n):
+    n=str(n)
+    s=0
+    for i in n:
+        i=int(i)
+        f=0
+        for j in range(2,i//2+1):
+            if i%j==0:
+                f=1
+                break
+        if(f==0):
+            s+=i
+    return s
+
