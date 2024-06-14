@@ -1,0 +1,13 @@
+n=int(input())
+if(n>=0 and n<=9):
+    print("Yes")
+l=[2,3,5,7]
+i=0
+while(i<4 and n>1):
+    while(n%l[i]==0):
+        n=n/l[i]
+    i+=1
+if(n==1):
+    print("Yes")
+else:
+    print("No")
