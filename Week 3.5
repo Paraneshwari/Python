@@ -1,7 +1,7 @@
-a=input()
-if(a in "aeiouAEIOU"):
-    print("It's a vowel.")
-elif(a=='y'):
-    print("Sometimes it's a vowel... Sometimes it's a consonant.")
+m=int(input())
+p=int(input())
+c=int(input())
+if((m>=65&p>=55&c>=50) or (m+p+c>=180)):
+    print("The candidate is eligible")
 else:
-    print("It's a consonant.")
+    print("The candidate is not eligible")
