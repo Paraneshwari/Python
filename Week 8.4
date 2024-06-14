@@ -1,11 +1,12 @@
-nums=input()
-l=nums.split()
-for i in nums:
-    if i not in l:
-        l.append(i)
-
-for i in l:
-    if nums.count(i)>1:
-        print(i)
-        break
+s1=input()
+s2=input()
+l1=s1.split()
+l2=s2.split()
+l1.extend(l2)
+d={}
+for i in l1:
+    d[i]=l1.count(i)
+for i in d:
+    if d[i]==1:
+        print(i,end=" ")
 
