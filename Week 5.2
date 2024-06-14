@@ -1,10 +1,10 @@
-n=int(input())
-arr=[]
-for i in range(n):
-    a=int(input())
-    arr.append(a)
-for i in range(n):
-        l= sum(arr[0:i])
-        r = sum(arr[i+1:])
-        if(l == r):
-            print(i)
+s1=input()
+s2=input()
+f=0
+for i in range(len(s1)):
+        if(s1[i] not in s2):
+            f=1
+if(f):
+    print("False")
+else:
+    print("True")
