@@ -1,0 +1,10 @@
+d={'aeilnorstu':1,'dg':2,'bcmp':3,'fhvwy':4,'k':5,'jx':8,'qz':10}
+a=input()
+a=a.lower()
+s=0
+for i in a:
+    for j in d:
+        if i in j:
+            s+=d[j]
+            
+print(a.upper(),"is worth",s,'points.'
