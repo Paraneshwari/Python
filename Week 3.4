@@ -1,6 +1,7 @@
-a=int(input())
-b=int(input())
-if(b>=(a//2)):
-    print("IN")
+a=input()
+if(a in "aeiouAEIOU"):
+    print("It's a vowel.")
+elif(a=='y'):
+    print("Sometimes it's a vowel... Sometimes it's a consonant.")
 else:
-    print("OUT")
+    print("It's a consonant.")
