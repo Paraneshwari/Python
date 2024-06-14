@@ -1,0 +1,19 @@
+n1=int(input())
+l1=[]
+l2=[]
+for i in range(n1):
+    a=int(input())
+    l1.append(a)
+
+n2=int(input())
+for i in range(n2):
+    a=int(input())
+    l2.append(a)
+l3=l1
+for i in l2:
+    if(i not in l3):
+        l3.append(i)
+l3.sort()
+for i in l3:
+    print(i,end=" ")
+
