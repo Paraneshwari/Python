@@ -1,19 +1,18 @@
-n1=int(input())
-l1=[]
-l2=[]
-for i in range(n1):
-    a=int(input())
-    l1.append(a)
+s=input()
+start = 0
+end = len(s) - 1
+s = list(s)
+while start < end:
+    if not s[start].isalnum():
+        start += 1
+    elif not s[end].isalnum():
+        end -= 1
+    else:
+        s[start], s[end] = s[end], s[start]
+        start += 1
+        end -= 1
 
+print(''.join(s))
 
-n2=int(input())
-for i in range(n2):
-    a=int(input())
-    l2.append(a)
-l3=l1
-for i in l2:
-    if(i not in l3):
-        l3.append(i)
-l3.sort()
-for i in l3:
-    print(i,end=" ")
+                
+        
